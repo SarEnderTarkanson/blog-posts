@@ -1,20 +1,19 @@
 import React from "react";
-import profile1 from "./image/profilePic.jpg";
 
-const SingleComment = () => {
+const SingleComment = (props) => {
   return (
     <div className="comment">
       <a href="/" className="avatar">
-        <img src={profile1} alt="profile picture"></img>
+        <img src={props.picture} alt="profile picture"></img>
       </a>
       <div className="content">
         <a href="/" className="author">
-          Sarah
+          {props.name}
         </a>
         <div className="metadata">
-          <span className="date">Today at 5:00 PM</span>
+          <span className="date">{props.date}</span>
         </div>
-        <div className="text">It's amazing!!!</div>
+        <div className="text">{props.text}</div>
       </div>
     </div>
   );
